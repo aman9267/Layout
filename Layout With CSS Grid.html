@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<style>
+
+.main{background-color: beige;
+    font-size: 25px;
+text-align: center;}
+/* navbar container here */
+        .container{ 
+            display: grid;   
+            grid-template-columns: 1fr 6fr;
+            background-color: blue;
+        }
+        /* Header container here */
+        .container-2{ 
+            display: grid;
+            grid-template-columns: 6fr, 1fr;
+            background-color: blueviolet;
+            grid-template-rows: 100px;  /*header width */
+        }
+        /* artical or add container here */
+        .container-3{
+            display: grid;
+            grid-template-columns: 6fr 1fr;
+            grid-template-rows: 625px; /*artical or add width */
+            background-color: yellow;
+        }
+        /* foonter container here */
+        .footer{
+            display: grid;
+            grid-template-columns: 100px;
+            background-color: oldlace;
+            grid-template-rows: 100px; /*footer width */
+        }
+        .add{
+            background-color: orange;
+        }
+
+        /* #navbar{
+            
+        } */
+
+
+</style>
+<body>
+    <!--Main Container here-->
+    <div class="main">
+
+        <!--Parent Grid-->
+        <div class="container">
+            <div class="a" id="navbar">NavBar</div>
+        <!--Container Child Grid-->
+        <div class="container-2">
+            <div class="Footer">Header</div>
+        <!-- Child of container-2 and parent grid-->
+            <div class="container-3" id="artical">
+                <div class="artical">Artical</div>
+                <div class="add">Adds</div>
+            </div>
+            <!--Child of container child 
+            grid or parent-->
+            <div class="footer">Footer</div>
+        </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>
